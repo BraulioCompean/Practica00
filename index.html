@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            cursor: pointer;
+        }
+
+        img{
+            width: 300;
+            height: 300px;
+        }
+       
+        
+        .contenedor{
+            display: flex;
+            gap: 30px;
+            
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo">¡Hola!</h1>
+    <h2>Esta es mi primera web</h2>
+    <h3>Me llamo Braulio</h3>
+    <h4>Estas son mis artistas / bandas favoritas:</h4>
+    
+    <div class="contenedor">
+        <div class="Imagen">
+            <a href="https://open.spotify.com/intl-es/artist/3G3Gdm0ZRAOxLrbyjfhii5?si=hJ2XEYmuS-uBsZDTn_pong"> 
+                <img src="imgs/mbv.jpg" alt="my bloody valentine">
+            </a>
+            <p>My Bloody Valentine</p>
+        </div>
+        <div class="Imagen">
+            <a href="https://open.spotify.com/intl-es/artist/3A5tHz1SfngyOZM2gItYKu?si=hxM6-MF_RAugnb4weZq4MQ"> 
+                <img src="imgs/earl.jpg" alt="earl sweatshirt">
+            </a>
+            <p>Earl sweatshirt</p>
+            
+        </div>
+        <div class="Imagen">
+            <a href="https://open.spotify.com/intl-es/artist/0IVcLMMbm05VIjnzPkGCyp?si=ZlLrQstyRSS8edKZGXRhzw">
+                <img src="imgs/jdilla.jpg" alt="j dilla">
+            </a>
+            <p>J Dilla</p>
+        </div>
+        <div class="Imagen">
+            <a href="https://open.spotify.com/intl-es/artist/5PbpKlxQE0Ktl5lcNABoFf?si=gC_K6kAaQIucJ0UELTzwGw">
+                <img src="imgs/csh.jpg" alt="car seat headrest">
+            </a>
+            <p>Car Seat Headrest</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('titulo').addEventListener('click',()=>{
+            document.body.style.transition = 'background-color 1s'
+            document.body.style.background = '#171717'
+
+            document.querySelector('h1').style.transition = 'color 3s'
+            document.querySelector('h2').style.transition = 'color 3s'
+            document.querySelector('h3').style.transition = 'color 3s'
+            document.querySelector('h4').style.transition = 'color 3s'
+            
+
+            document.querySelector('h1').style.color = 'white'
+            document.querySelector('h2').style.color = 'white'            
+            document.querySelector('h3').style.color = 'white'            
+            document.querySelector('h4').style.color = 'white'            
+
+            texto = document.querySelectorAll('p')
+            texto.forEach(parrafo => {
+                parrafo.style.transition = 'color 3s'
+                parrafo.style.color = 'white'
+            });
+        })
+    </script>
+</body>
+</html>
